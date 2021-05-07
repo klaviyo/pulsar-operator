@@ -17,6 +17,12 @@ image: check-repo
 	docker push $(REPOSITORY)
 .PHONY: image
 
+
+# install to kubernetes
+install:
+	deploy/install.sh
+.PHONY: install
+
 # generate code(zz_generated*)
 # generate go mod list to vendor
 # Example:
