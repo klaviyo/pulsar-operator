@@ -11,6 +11,7 @@ brew install golang
 make build
 make image REPOSITORY=YOUR_DOCKER_REPO
 make install
+```
 
 Use command ```kubectl get pods``` to check Pulsar Operator deploy status.
 
