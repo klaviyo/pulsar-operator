@@ -16,8 +16,8 @@ func makePodSpec(c *pulsarv1alpha1.PulsarCluster) v1.PodSpec {
 func makeContainer(c *pulsarv1alpha1.PulsarCluster) v1.Container {
 	return v1.Container{
 		Name:            "replication-worker",
-		Image:           c.Spec.AutoRecovery.Image.GenerateImage(),
-		ImagePullPolicy: c.Spec.AutoRecovery.Image.PullPolicy,
+		Image:           c.Spec.Bookie.Image.GenerateImage(),
+		ImagePullPolicy: c.Spec.Bookie.Image.PullPolicy,
 		Command:         makeContainerCommand(),
 		Args:            makeContainerCommandArgs(),
 		Env:             makeContainerEnv(c),

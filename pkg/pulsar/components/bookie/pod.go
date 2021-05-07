@@ -87,8 +87,8 @@ func makeContainerEnvFrom(c *pulsarv1alpha1.PulsarCluster) []v1.EnvFromSource {
 func makeInitContainer(c *pulsarv1alpha1.PulsarCluster) v1.Container {
 	return v1.Container{
 		Name:            "bookie-metaformat",
-		Image:           c.Spec.AutoRecovery.Image.GenerateImage(),
-		ImagePullPolicy: c.Spec.AutoRecovery.Image.PullPolicy,
+		Image:           c.Spec.Bookie.Image.GenerateImage(),
+		ImagePullPolicy: c.Spec.Bookie.Image.PullPolicy,
 		Command:         makeInitContainerCommand(),
 		Args:            makeInitContainerCommandArgs(),
 		EnvFrom:         makeInitContainerEnvFrom(c),

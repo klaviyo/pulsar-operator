@@ -3,8 +3,6 @@
 export WORK_DIR=$(cd `dirname $0`; pwd)
 cd ${WORK_DIR}
 
-IMAGE=skybig/pulsar-operator:latest
-
 # build operator
 cd .. && make build && cd ./docker
 
@@ -14,7 +12,7 @@ cp ../bin/pulsar-operator .
 echo "[START] build pulsar operator images"
 
 # build docker image
-docker build --tag "${IMAGE}" .
+docker build --tag "${1:?Image tag(ECR repo) is required}" -f docker/Dockerfile bin/
 
 echo "[END] build pulsar operator images"
 

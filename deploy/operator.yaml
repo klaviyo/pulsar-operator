@@ -15,7 +15,7 @@ spec:
       serviceAccountName: pulsar-operator
       containers:
         - name: pulsar-operator
-          image: "skybig/pulsar-operator:latest"
+          image: "439508887365.dkr.ecr.us-east-1.amazonaws.com/zbtest"
           command:
           - pulsar-operator
           imagePullPolicy: Always

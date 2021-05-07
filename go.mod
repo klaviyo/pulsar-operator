@@ -22,6 +22,7 @@ replace (
 )
 
 replace (
+	bitbucket.org/ww/goautoneg => github.com/bakito/goautoneg v0.0.0-20120707110453-a547fc61f48d
 	github.com/coreos/prometheus-operator => github.com/coreos/prometheus-operator v0.29.0
 	// Pinned to v2.9.2 (kubernetes-1.13.1) so https://proxy.golang.org can
 	// resolve it correctly.
